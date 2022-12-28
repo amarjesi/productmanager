@@ -1,4 +1,4 @@
-package com.example.product.model;
+package com.example.product.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,6 +15,27 @@ public class Product {
 	private long id;
 	@Column(name = "product_name")
 	private String productName;
+
+
+
+	@Column (name = "product_location")
+	private String productLocation;
+
+
+
+
+
+	public String getProductCategory() {
+		return productCategory;
+	}
+
+	public void setProductCategory(String productCategory) {
+		this.productCategory = productCategory;
+	}
+
+	@Column (name = "product_category")
+	private String productCategory;
+
 	@Column(name = "product_price")
 	private String productPrice;
 	@Column(name = "product_desc")
@@ -42,6 +63,14 @@ public class Product {
 	}
 	public void setProductDescription(String productDescription) {
 		this.productDescription = productDescription;
+	}
+
+	public String getProductLocation() {
+		return productLocation;
+	}
+
+	public void setProductLocation(String productLocation) {
+		this.productLocation = productLocation;
 	}
 
 }

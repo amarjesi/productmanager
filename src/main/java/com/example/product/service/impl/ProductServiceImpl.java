@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.example.product.model.Product;
+import com.example.product.entity.Product;
 import com.example.product.repository.ProductRepositoryInt;
 import com.example.product.service.ProductService;
 

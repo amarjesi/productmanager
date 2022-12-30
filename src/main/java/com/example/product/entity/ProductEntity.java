@@ -17,7 +17,7 @@ public class ProductEntity {
 	private String productName;
 
 
-
+	// comment
 	@Column (name = "product_location")
 	private String productLocation;
 

@@ -2,16 +2,17 @@ package com.example.product.service;
 
 import java.util.List;
 
-import com.example.product.entity.Product;
+import com.example.product.domain.Product;
+import com.example.product.entity.ProductEntity;
 
 public interface ProductService {
-	public Product saveProduct(Product p);
+	public Product saveProduct(Product product);
 
-	public List<Product> getAllProducts();
+	public List<ProductEntity> getAllProducts();
 
-	public Product findProductById(long id) ;
+	public ProductEntity findProductById(long id) ;
 
-	public Product updateProduct(Product p, long id) ;
+	public ProductEntity updateProduct(ProductEntity p, long id) ;
 
 	public void deleteProduct(long id);
 }

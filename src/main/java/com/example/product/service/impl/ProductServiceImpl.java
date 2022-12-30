@@ -1,43 +1,42 @@
 package com.example.product.service.impl;
 
+import com.example.product.domain.Product;
+import com.example.product.entity.ProductEntity;
+import com.example.product.mapper.ProductMapper;
+import com.example.product.repository.ProductRepository;
+import com.example.product.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.stereotype.Service;
-
-import com.example.product.entity.Product;
-import com.example.product.repository.ProductRepositoryInt;
-import com.example.product.service.ProductService;
-
 @Service
 public class ProductServiceImpl implements ProductService {
-	private ProductRepositoryInt repository;
 
-	public ProductServiceImpl(ProductRepositoryInt repo) {
-		super();
-		this.repository = repo;
+	@Autowired
+	ProductRepository repository;
+
+	@Override
+	public Product saveProduct(Product product) {
+
 	}
 
 	@Override
-	public Product saveProduct(Product p) {
-		return repository.save(p);
-	}
-
-	@Override
-	public List<Product> getAllProducts() {
+	public List<ProductEntity> getAllProducts() {
 		return repository.findAll();
 	}
 
 	@Override
-	public Product findProductById(long id)  {
-		Optional<Product> prod = repository.findById(id);
+	public ProductEntity findProductById(long id)  {
+		Optional<ProductEntity> prod = repository.findById(id);
 	
 			return prod.get();
 	}
 
 	@Override
-	public Product updateProduct(Product p, long id) {
-		Product prod = repository.findById(id).get();
+	public ProductEntity updateProduct(ProductEntity p, long id) {
+		ProductEntity prod = repository.findById(id).get();
 		
 			prod.setProductDescription(p.getProductDescription());
 			prod.setProductName(p.getProductName());

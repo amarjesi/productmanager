@@ -16,14 +16,8 @@ public class ProductEntity {
 	@Column(name = "product_name")
 	private String productName;
 
-
-	// comment
 	@Column (name = "product_location")
 	private String productLocation;
-
-
-
-
 
 	public String getProductCategory() {
 		return productCategory;

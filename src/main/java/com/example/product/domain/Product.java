@@ -3,7 +3,6 @@ package com.example.product.domain;
 public class Product {
 
     private String productName;
-    // new comment
     private String productPrice;
     private String productDescription;
     private String productCategory;
